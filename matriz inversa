@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int matriz[3][3]; // Declaração da matriz 3x3 para armazenar os valores inteiros
+    int i, j; // Variáveis para controle dos loops
+
+    // Solicita e armazena os valores na matriz
+    printf("Digite os valores para a matriz 3x3:\n");
+    for(i = 0; i < 3; i++) {
+        for(j = 0; j < 3; j++) {
+            printf("Matriz[%d][%d]: ", i, j);
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+
+    // Exibe os elementos da matriz na ordem inversa
+    printf("\nOs elementos da matriz na ordem inversa sao:\n");
+    for(i = 2; i >= 0; i--) {
+        for(j = 2; j >= 0; j--) {
+            printf("%d ", matriz[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
